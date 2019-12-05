@@ -1,13 +1,16 @@
 {
-  "name": "ndli_app",
+  "name": "nodejs-image-demo",
   "version": "1.0.0",
-  "description": "NDLI Application",
-  "author": "version Version",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "description": "nodejs image demo",
+  "author": "Sammy the Shark <sammy@example.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.4"
   }
 }
