@@ -5,7 +5,7 @@
 body {
     background: #020A1B;
     color: #ffffff;
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Livvic', sans-serif;
 }
 
 h1,
@@ -22,11 +22,16 @@ p {
     background: #0048CD;
     color: white;
     text-align: center;
+    border-radius: 25px;
+    margin-top: 20px;
 }
 
 .jumbotron p {
     color: white;
-    font-size: 26px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .btn-primary {
@@ -43,7 +48,14 @@ audio {
     max-width: 80%;
 }
 
-div.caption: {
+div.caption {
     float: left;
     clear: both;
+}
+
+img {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 250px;
 }
