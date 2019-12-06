@@ -5,6 +5,7 @@ const router = express.Router();
 const path = __dirname + '/views/';
 const port = 8080;
 
+let openMailbox = false;
 router.use(function(req, res, next) {
     console.log('/' + req.method);
     next();
@@ -18,6 +19,13 @@ router.get('/house', function(req, res) {
     res.sendFile(path + 'escape-game.html');
 });
 
+router.get('/drawer', function(req, res) {
+    res.sendFile(path + 'drawer.html');
+});
+
+router.get('/mailbox', function(req, res) {
+    res.sendFile(path + 'mailbox.html');
+});
 
 app.use(express.static(path));
 app.use('/', router);
