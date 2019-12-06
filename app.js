@@ -14,10 +14,13 @@ router.get('/', function(req, res) {
     res.sendFile(path + 'index.html');
 });
 
-router.get('/house', function(req, res) {
-    res.sendFile(path + 'escape-game.html');
-});
+// router.get('/house', function(req, res) {
+//     res.sendFile(path + 'escape-game.html');
+// });
 
+router.get('/drawer', function(req, res) {
+    res.sendFile(path + 'drawer.html');
+});
 
 app.use(express.static(path));
 app.use('/', router);
