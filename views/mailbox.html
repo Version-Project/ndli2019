@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <button onclick="displayEnvelope(1)" class="btn-warning"><b>Ouvrir la boîte aux lettres</b></button>
+                <button onclick="displayEnvelope()" class="btn-warning"><b>Ouvrir la boîte aux lettres</b></button>
             </div>
         </div>
         <div class="row">
@@ -44,13 +44,72 @@
                     <img src="envelope.png " class="envelope-img" alt="Envelope" />
                 </button>
             </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(2)" class="btn btn-link" id="envelope2" hidden=true>
+                        <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                    </button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(3)" class="btn btn-link" id="envelope3" hidden=true>
+                            <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                        </button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(4)" class="btn btn-link" id="envelope4" hidden=true>
+                                <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                            </button>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-lg-3">
-                <p style="margin-top: 20px; " class="hint" id="hint1" hidden=true>
-                    Le premier indice se trouve dans un tiroir du meuble télé.
-                </p>
+                <p style="margin-top: 20px; " class="hint" id="hint1" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint2" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint3" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint4" hidden=true>-</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <button onclick="displayHint(5)" class="btn btn-link" id="envelope5" hidden=true>
+                        <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                    </button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(6)" class="btn btn-link" id="envelope6" hidden=true>
+                            <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                        </button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(7)" class="btn btn-link" id="envelope7" hidden=true>
+                                <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                            </button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="displayHint(8)" class="btn btn-link" id="envelope8" hidden=true>
+                                    <img src="envelope.png " class="envelope-img" alt="Envelope" />
+                                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint5" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint6" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint7" hidden=true>-</p>
+            </div>
+            <div class="col-lg-3">
+                <p style="margin-top: 20px; " class="hint" id="hint8" hidden=true>-</p>
             </div>
         </div>
     </div>
@@ -59,11 +118,26 @@
 </html>
 
 <script>
-    function displayEnvelope(num) {
-        document.getElementById("envelope" + num).hidden = false;
+    let letterNum = 1;
+
+    function displayEnvelope() {
+        if (letterNum > 8) return;
+        document.getElementById("envelope" + letterNum).hidden = false;
+        ++letterNum;
     }
 
     function displayHint(num) {
+        let content;
+        if (num === 1) content = "Rends-toi sur la page d'accueil, et essaye d'y ouvrir la porte en bas à droite.";
+        if (num === 2) content = "Le premier indice du code se trouve dans un tiroir du meuble télé.";
+        if (num === 3) content = "Ouvre la grande armoire de la cuisine pour trouver le deuxième indice.";
+        if (num === 4) content = "La troisième lettre du code se trouve dans un tiroir de la chambre.";
+        if (num === 5) content = "Regarde par une des fenêtres du salon : le quatrième indice est à l'extérieur.";
+        if (num === 6) content = "Le prochain indice est situé dans l'armoire de la chambre.";
+        if (num === 7) content = "Sous l'évier de la salle de bain le dernier indice tu trouveras.";
+        if (num === 8) content = "Va maintenant rentrer le code près de la porte d'entrée.";
+
+        document.getElementById("hint" + num).textContent = content;
         document.getElementById("hint" + num).hidden = false;
     }
 </script>

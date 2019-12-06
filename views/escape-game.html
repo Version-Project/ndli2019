@@ -4,22 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <<<<<<< HEAD <title>Site anti-précarité étudiante</title>
-        =======
-        <title>Unity WebGL Player | EscapeGame</title>
-        >>>>>>> 4219341dab3922701d9d5d6dac11ac61505187a8
-        <link rel="shortcut icon" href="TemplateData/favicon.ico">
-        <link rel="stylesheet" href="TemplateData/style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="css/styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Livvic:400,700" rel="stylesheet" type="text/css">
-        <script src="TemplateData/UnityProgress.js"></script>
-        <script src="Build/UnityLoader.js"></script>
-        <script>
-            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build.json", {
-                onProgress: UnityProgress
-            });
-        </script>
+    <title>Site anti-précarité étudiante</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Livvic:400,700" rel="stylesheet" type="text/css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build.json", {
+            onProgress: UnityProgress
+        });
+    </script>
 </head>
 
 
@@ -45,7 +42,7 @@
         </div>
     </nav>
 
-    <div class="webgl-content">
+    <div class="webgl-content" style="padding-top: 100px">
         <div id="gameContainer" style="width: 960px; height: 600px"></div>
         <div class="footer">
             <div class="webgl-logo"></div>
@@ -53,6 +50,9 @@
             <div class="title">EscapeGame</div>
         </div>
     </div>
+
+    <p style="margin-top: 20px;font-size:30px;text-align:center ">Vous voilà piégé dans cette maison, pauvre étudiant(e) !<br /> Pour trouver le code de sortie, ouvrez toutes les enveloppes dans la boîte aux lettres, et partez à la recherche des indices !</p>
+    <p style="margin-top: 20px;font-size:20px;text-align:center;padding-top: 650px "><b>- Contrôles -</b><br />(Z/Q/S/D) ou les flèches directionnelles pour se déplacer<br />(Shift) pour accélérer<br />(Espace) pour s'accroupir<br />(E) ou clic gauche pour interagir</p>
 </body>
 
 </html>

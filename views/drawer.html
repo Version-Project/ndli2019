@@ -32,7 +32,68 @@
         </div>
     </nav>
 
-    <div>Test</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(1)"><b>Premier Tiroir</b></button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(2)"><b>Deuxième Tiroir</b></button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(3)"><b>Troisième Tiroir</b></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer1"></p>
+            </div>
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer2"></p>
+            </div>
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer3"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(4)"><b>Quatrième Tiroir</b></button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(5)"><b>Cinquième Tiroir</b></button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-warning" onclick="openDrawer(6)"><b>Sixième Tiroir</b></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer4"></p>
+            </div>
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer5"></p>
+            </div>
+            <div class="col-lg-4">
+                <p style="margin-top: 20px;" class="hint" id="drawer6"></p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+
+<script>
+    function openDrawer(num) {
+
+        let content = document.getElementById("drawer" + num).textContent;
+        if (content === "") {
+            if (num === 1) content = "Ce tiroir contient un bouton de chemise";
+            if (num === 2) content = "Ce tiroir contient vos économies restantes...";
+            if (num === 3) content = "Ce tiroir contient un bonnet";
+            if (num === 4) content = "Ce tiroir contient trois paquets de pâtes";
+            if (num === 5) content = "Ce tiroir contient votre diplôme du baccalauréat";
+            if (num === 6) content = "Ce tiroir contient un placard à tiroir";
+        } else content = "";
+        document.getElementById("drawer" + num).textContent = content;
+    }
+</script>
