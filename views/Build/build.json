@@ -1,6 +1,6 @@
 {
-"companyName": "DefaultCompany",
-"productName": "TestOpengGl",
+"companyName": "DJF-Factory",
+"productName": "EscapeGame",
 "dataUrl": "build.data.unityweb",
 "wasmCodeUrl": "build.wasm.code.unityweb",
 "wasmFrameworkUrl": "build.wasm.framework.unityweb",
